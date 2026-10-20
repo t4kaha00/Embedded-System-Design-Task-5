@@ -39,10 +39,17 @@ void SysTick_Handler(void) {
 int main(void) {
     uint32_t baud = 9600;
 
+    CLK_Init();         // Enable the clock
+    TIM2_Init();        // Initialize the timer
+    UART_Set_Pin();     // Set pin 9 for UART
+
     while (1) {
         /* ============ Task 2 ============ */
         // Also send 0x55 and 0x96 and take a screenshot of PulseView
         uart_send_char('A', baud);   // Debug: check with logic analyzer
+        // The following lines can be used to send 0x55 and 0x96
+        uart_send_char(0x55, baud);
+        uart_send_char(0x96, baud);
         timer_delay_us(1000);
 
     /* =================== Task 3 ===================

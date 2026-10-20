@@ -10,7 +10,8 @@ void UART_Set_Pin(void) {
 }
 
 void uart_send_char(char c, uint32_t baud) {
-    uint32_t bit_time_us = 1000UL / baud;
+    // Need to increase the bit time to get around 104us
+    uint32_t bit_time_us = 1000000UL / baud;
 
     // Start bit
     GPIOE_ODR &= ~(1 << TX_PIN);

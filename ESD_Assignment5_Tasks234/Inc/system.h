@@ -1628,7 +1628,7 @@ typedef struct
 #define RCC_PLLI2SCFGR_PLLI2SR_2           (0x4UL << RCC_PLLI2SCFGR_PLLI2SR_Pos) /*!< 0x40000000 */
 
 /* GPIO */
-#define GPIOA_BASE      0x40030000UL
+#define GPIOA_BASE      0x40020000UL
 #define GPIOD_BASE      0x80020C00UL
 #define GPIOEE_BASE     0x40021000
 #define GPIOA_MODER     (*(volatile uint32_t *)(GPIOA_BASE + 0x00))
