@@ -2,10 +2,10 @@
 
 void GDPIN_Init(void) {
     for (int i = 12; i <= 15; ++i) {
-        GPIOD->MODER  &= ~(0x3 << (i));
-        GPIOD->MODER  |=  (0x1 << (i));
-        GPIOD->OTYPER |= (0x1 << i);
-        GPIOD->PUPDR  |= (0x1 << i * 2);
+        GPIOD->MODER 	&= ~(0x3 << (i * 2));
+        GPIOD->MODER  	|= (0x1 << (i * 2));
+        GPIOD->OTYPER 	&= ~(0x1 << i);
+        GPIOD->PUPDR  	&= ~(0x3 << (i * 2));
     }
 }
 

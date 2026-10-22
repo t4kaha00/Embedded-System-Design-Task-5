@@ -45,6 +45,7 @@ int main(void) {
     TIM2_Init();        // Initialize the timer
     UART_Set_Pin();     // Set pin 9 for UART
     IRQ_Init();
+    GDPIN_Init();
 
     while (1) {
         /* ============ Task 2 ============ */
@@ -68,8 +69,8 @@ int main(void) {
      *  Uncomment when Task 3 is working and DEBUGGED
      */
             /* ============ Task 4 ============ */
-//            lstate = (lstate + 1) % NUM_STATES;
-//            SetState(lstate);
+           lstate = (lstate + 1) % NUM_STATES;
+           SetState(lstate);
         }
     }
 }

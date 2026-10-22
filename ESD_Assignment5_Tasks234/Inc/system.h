@@ -1147,7 +1147,7 @@ typedef struct
 #define RCC_AHB1ENR_GPIOCEN_Pos            (2U)
 #define RCC_AHB1ENR_GPIOCEN_Msk            (0x1UL << RCC_AHB1ENR_GPIOCEN_Pos)   /*!< 0x00000004 */
 #define RCC_AHB1ENR_GPIOCEN                RCC_AHB1ENR_GPIOCEN_Msk
-#define RCC_AHB1ENR_GPIODEN_Pos            (6U)
+#define RCC_AHB1ENR_GPIODEN_Pos            (3U)
 #define RCC_AHB1ENR_GPIODEN_Msk            (0x1UL << RCC_AHB1ENR_GPIODEN_Pos)   /*!< 0x00000008 */
 #define RCC_AHB1ENR_GPIODEN                RCC_AHB1ENR_GPIODEN_Msk
 #define RCC_AHB1ENR_GPIOEEN_Pos            (4U)
@@ -1629,7 +1629,7 @@ typedef struct
 
 /* GPIO */
 #define GPIOA_BASE      0x40020000UL
-#define GPIOD_BASE      0x80020C00UL
+#define GPIOD_BASE      0x40020C00UL
 #define GPIOEE_BASE     0x40021000
 #define GPIOA_MODER     (*(volatile uint32_t *)(GPIOA_BASE + 0x00))
 #define GPIOA_PUPDR     (*(volatile uint32_t *)(GPIOA_BASE + 0x0C))
