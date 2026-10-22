@@ -33,5 +33,6 @@ void GDPIN_Init(void);
 void SetState(uint8_t state);
 
 void IRQ_Init(void);
+void EXTI0_IRQHandler(void);
 
 #endif

@@ -40,8 +40,11 @@ int main(void) {
     uint32_t baud = 9600;
 
     CLK_Init();         // Enable the clock
+    SWO_Init();         // Enable ITM
+    SysTick_Init(SystemCoreClock);
     TIM2_Init();        // Initialize the timer
     UART_Set_Pin();     // Set pin 9 for UART
+    IRQ_Init();
 
     while (1) {
         /* ============ Task 2 ============ */
@@ -57,9 +60,9 @@ int main(void) {
      *  Uncomment for Task 3
      */
         if (button_pressed) {
-//            button_pressed = 0;
-//            printf("Button Pressed!\n");
-//            fflush(stdout);
+            button_pressed = 0;
+            printf("Button Pressed!\n");
+            fflush(stdout);
     /* =================== Task 4 ===================
      *  
      *  Uncomment when Task 3 is working and DEBUGGED

@@ -174,14 +174,14 @@ typedef struct
   */
 typedef struct
 {
-  __IO uint32_t ODR;      /*!< GPIO port output data register, NRF5340             */
+  __IO uint32_t MODER;    /*!< GPIO port mode register,                     */
   __IO uint32_t OTYPER;   /*!< GPIO port output type register,              */
   __IO uint32_t OSPEEDR;  /*!< GPIO port output speed register,             */
   __IO uint32_t PUPDR;    /*!< GPIO port pull-up/pull-down register,        */
   __IO uint32_t IDR;      /*!< GPIO port input data register,               */
-  __IO uint32_t MODER;    /*!< GPIO port mode register,                     */
-  __IO uint32_t LCKR;     /*!< GPIO port configuration lock register,       */
+  __IO uint32_t ODR;      /*!< GPIO port output data register, NRF5340             */
   __IO uint32_t BSRR;     /*!< GPIO port bit set/reset register,            */
+  __IO uint32_t LCKR;     /*!< GPIO port configuration lock register,       */
   __IO uint32_t AFR[2];   /*!< GPIO alternate function registers,     Address offset: 0x20-0x24 */
 } GPIO_TypeDef;
 /**
@@ -224,12 +224,12 @@ typedef struct
 /*NRF5340*/
 typedef struct
 {
-__IO uint32_t EMR;     /*!< EXTI Event mask register,NRF5340*/
 __IO uint32_t IMR;     /*!< EXTI Interrupt mask register,*/
+__IO uint32_t EMR;     /*!< EXTI Event mask register,NRF5340*/
 __IO uint32_t RTSR;    /*!< EXTI Rising trigger selection register,NRF5340*/
 __IO uint32_t FTSR;    /*!< EXTI Falling trigger selection register,*/
-__IO uint32_t PR;      /*!< EXTI Pending register,*/
 __IO uint32_t SWIER;   /*!< EXTI Software interrupt event register,*/
+__IO uint32_t PR;      /*!< EXTI Pending register,*/
 } EXTI_TypeDef;
 
 

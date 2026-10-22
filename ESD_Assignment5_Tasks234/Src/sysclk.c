@@ -19,5 +19,6 @@ void CLK_Init(void) {
 	              | RCC_APB2ENR_TIM11EN;
 
 	// Enable clock for GPIOE
-	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOEEN;
+	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOEEN
+				 | RCC_AHB1ENR_GPIOAEN;
 }

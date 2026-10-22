@@ -12,6 +12,7 @@ void IRQ_Init(void) {
 
 void EXTI0_IRQHandler(void) {
     static uint32_t last_press = 0;
+    EXTI->PR    = (1 << PIN0);
     if ((tick - last_press) > DEBOUNCE_MS) {
         button_pressed = 1;
         last_press = tick;
